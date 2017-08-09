@@ -1,0 +1,18 @@
+username 	- Admin 			ANU
+Name		- Super Admin
+password 	- 1212				
+
+
+username 	- secretary 		AM
+Name		- Dep Secretaty
+password 	- 123123
+
+
+username 	- adsecretary 		AA
+Name		- Add Secretary
+password 	- 1010
+
+
+username 	- clerk 			MA
+Name		- Subject Clerk
+password 	- 1234

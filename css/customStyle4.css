@@ -1,0 +1,17 @@
+@import url("../webfonts/bebas_regular_macroman/stylesheet.css");
+@import url("../webfonts/amble_regular_macroman/stylesheet.css");
+
+#unathorizedAccessDiv {
+	max-width: 400px;
+	margin: 10px auto;
+	text-align: center;
+}
+
+#unathorizedAccessDiv h2{
+	font-family: "bebasregular";
+	font-size: 30px;
+}
+
+#unathorizedAccessDiv h4{
+	font-family: "ambleregular";
+}

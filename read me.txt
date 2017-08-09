@@ -1,0 +1,75 @@
+1	Gender 
+	-male - 1
+	-female - 0
+
+	Civil status 
+	-married - 1
+	-single - 0
+
+	Citizenship
+	-Sri Lankan - 1
+	-no - 0
+
+3	Tax payer
+	-yes - 1
+	-no - 0
+
+4	Offence
+	-yes - 1
+	-no - 0
+
+5	Cultivation
+	-yes - 1
+	-no - 0
+
+	Livestock
+	-yes - 1
+	-no - 0
+
+6	Stolen
+	-yes - 1
+	-no - 0
+
+7	Guns in possession
+	-yes - 1
+	-no - 0
+
+8	Service weapon
+	-yes - 1
+	-no - 0
+
+************************************************
+
+Category
+-Agriculture - 1
+-Livestock - 2
+-Personal - 3
+-VIP - 4
+-Sport - 5
+
+************************************************
+
+
+Approvals
+-Not seen - 0
+-Approved - 1
+-Rejected - 2
+
+additional Secretary	| 	Secretary	|	Status
+---------------------------------------------------------------------------------
+0						|	0			| 	Pending additional Secretary approval
+1						|	0			|	Pending Secretary approval
+1						|	1			|	Approved
+2						|	0			|	Rejected by Additional Secretary
+1						|	2			| 	Rejected by Secretary
+
+
+************************************************
+
+
+
+Posted
+- Not yet Posted - 0
+- Posted - 1
+
+************************************************

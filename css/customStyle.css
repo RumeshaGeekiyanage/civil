@@ -1,0 +1,341 @@
+@import url("../webfonts/bebas_regular_macroman/stylesheet.css");
+@import url("../webfonts/amble_regular_macroman/stylesheet.css");
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section { 
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000; 
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;   
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+
+
+
+/***************************************************************************/
+
+
+
+body {
+	font-size: 14px;
+	font-weight: 400;
+}
+
+#navBar {
+    background-color: #2A88AD;
+    border-radius: 10px;
+    box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
+    max-width: 800px;
+    margin: 5px auto;
+    min-height: 30px;
+    padding: 10px 30px 20px 30px;
+}
+
+#navBar a{
+    color: #ffffff;
+    transition: 0s color;
+}
+
+#navBar a:hover {
+    color: #000000;
+    transition-duration: 0.3s;
+}
+
+#backBtn {
+    padding-top: 7px;
+    width: 400px;
+    float: left;
+}
+
+#backBtn h2 {
+    display: inline;
+    font: normal 25px 'Bitter', serif;
+    color: #ffffff;
+    padding-left: 20px; 
+}
+
+#searchs {
+    width: 400px;
+    float: right;
+}
+
+#searchs input{
+    height: 18px;
+    margin-top: 7px;
+    padding: 5px;
+    border-radius: 3px;
+    border-style: none;
+    vertical-align: baseline;
+}
+
+#searchs button{
+    height: 28px;
+    width: 28px;
+    padding: 5px;
+    border-radius: 3px;
+    border-style: none;
+    background-color: #ffffff;
+}
+
+
+
+/**********************************/
+
+
+
+#main {
+    width: 100%;
+    margin: 0 auto;
+    box-shadow: -60px 0px 200px -20px #f7f7f7, 60px 0px 200px -20px #f7f7f7;
+}
+
+header {
+    margin: 0px auto;
+    width: 100%;
+    background-color: #ffffff; /* Remove later */
+}
+
+#innerHeader {
+    margin-top: 50px;
+    width: 100%;
+}
+
+#headerDiv {
+    width: 100%;
+    -moz-box-shadow: 0 4px 4px 0px #dadada;
+    -webkit-box-shadow: 0 4px 4px 0px #dadada;
+    box-shadow: 0 4px 4px 0px #dadada;
+}
+
+#innerHeader img {
+    width: 100%;
+}
+
+#bannerSmall {
+    max-width: 800px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+#bannerSmall img{
+    width: 80%;
+}
+
+#container {
+    padding: 50px 0 0px 0;
+    margin: 0 auto;
+    width: 100%;
+}
+
+#innerContainerDiv {
+    border-radius: 5px;
+    padding: 2px;
+    width: 22.5%;
+    float: left;
+    margin: 1%;
+    box-shadow: -6px 0px 20px -2px #8c8b8b, 6px 0px 20px -2px #8c8b8b;
+    transition: all .3s ease-in-out;
+}
+
+#innerContainerDiv:hover {
+    transform: scale(1.1);
+}
+
+#innerContainerDiv img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+#footerDiv {
+    background-color: #ecebeb;
+    bottom: 0;
+    height: 30px;
+    position: absolute;
+    width: 100%;
+    -moz-box-shadow:  0 -5px 5px -5px #dadada;;
+    -webkit-box-shadow:  0 -5px 5px -5px #dadada;;
+    box-shadow:  0 -5px 5px -5px #dadada;;
+}
+
+#footerDiv p{
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    text-align: center;
+    color: #797979;
+}
+
+#loginDiv {
+    padding: 30px 20px 60px 20px;
+    max-width: 500px;
+    margin: 75px auto;
+    background-color: #ffffff;
+    border-radius: 6px;
+    -moz-box-shadow: 0 0 10px #ccc;
+    -webkit-box-shadow: 0 0 10px #ccc;
+    box-shadow: 0 0 10px #ccc;
+}
+
+#loginDiv h1{
+    padding-bottom: 20px;
+    font-family: "bebasregular";
+    color: #75202a;
+    font-size: 26px;
+    font-weight: 600;
+    text-align: center;
+}
+
+#loginDiv form{
+    width: 80%;
+    margin: 0 auto;
+}
+
+#loginDiv input{
+    font-family: "ambleregular";
+    height: 30px;
+    border-radius: 3px;
+    border: 1px solid #b1b1b1;
+    text-indent: 10px;
+    padding: 4px 0;
+    width: 99%;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+#loginDiv button{
+    font-family: "bebasregular";
+    height: 42px;
+    color: #ffffff;
+    border-style: none;
+    border-radius: 3px;
+    margin-top: 10px;
+    padding: 4px;
+    font-size: 18px;
+    font-weight: 400;
+    width: 100%;
+    background: #ffffff; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#ad4e57, #75202a); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#ad4e57, #75202a); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#ad4e57, #75202a); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#ad4e57, #75202a); /* Standard syntax (must be last) */
+}
+
+#dashboardColouredDivsDiv a {
+    color: inherit;
+}
+
+
+
+/**********************************/
+
+
+
+.element {
+    display: inline-flex;
+    align-items: center;
+}
+
+#documentTable button {
+    background-color: #efebeb;
+    border-color: #c1c0c0;
+    border-width: 1px;
+    border-radius: 2px;
+    padding: 5px 10px;
+    margin-right: 10px;
+}
+
+#documentTable button:hover {
+    opacity: 0.7;
+    background-color: #b5eff1;
+}
+
+input[type="file"] {
+    display: none;
+}

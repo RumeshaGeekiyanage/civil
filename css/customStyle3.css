@@ -1,0 +1,8 @@
+#templateMainRow {
+    min-height: 875px;
+    font-size: inherit;
+}
+
+#aprRejBtns {
+	min-width: 100px;
+}
