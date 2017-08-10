@@ -78,20 +78,20 @@ $(document).ready(function(){
         $("#stolenTransDiv").show();
     });
 	$("#single").click(function(){
-		alert("gdsjh");	
+		//alert("gdsjh");	
         $("#marryDiv").hide();
     });
     $("#married").click(function(){
-		alert("gdsjh");	
+		//alert("gdsjh");	
         $("#marryDiv").show();
     });
     $("#citizenN").click(function(){
-		alert("sjsjsjjs");
-        //$("#nicDiv").hide();
+		//alert("sjsjsjjs");
+        $("#nicDiv").hide();
     });
     $("#citizenY").click(function(){
-		alert("sjsjsjjs");
-        //$("#nicDiv").show();
+		//alert("sjsjsjjs");
+        $("#nicDiv").show();
     });
 	
 

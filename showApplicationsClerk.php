@@ -82,7 +82,7 @@ class ShowApplicationsClerk {
 
 		$table = "application";
 		$fields = ["app_id", "a_id", "category","sec_ap_rej_date", "authentications", "ad_sec_approval", "sec_approval"];
-		$condition = "ad_sec_approval = '2' AND sec_approval = '2'";
+		$condition = "ad_sec_approval <> '2' AND sec_approval = '2'";
 
 		$table2 = "applicant";
 		$fields2 = ["full_name"];
@@ -137,6 +137,8 @@ class ShowApplicationsClerk {
 						<td>'. $category1. '</td>
 						<td>'. $date. '</td>
 						<td>'. $authentications1. '</td>
+						<td><button type="button" class="btn btn-default btn-sm" onclick = "window.location=\'applicationDetailsForm.php?id='. $appID. '\';">View</button></td>
+			
 					</tr>';
 			}
 		}

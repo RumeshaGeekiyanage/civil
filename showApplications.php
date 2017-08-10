@@ -198,7 +198,33 @@ class showApplications {
 
 
 
-	function pendingApprovalList() {}
+	function pendingApprovalList() {
+		
+	}
+	
+	function pendingDocumentList() {
+		$DBOb = $this->DBOb;
+
+		$table2 = "applicant";
+		$fields2 = ["full_name","address","telephone"];
+		$condition = false;
+
+		$selectedData = $DBOb->select($table, $fields, $condition);
+
+		if(!empty($selectedData)) {
+			foreach ($selectedData as $row) {
+				$applicantFullname = $row[0];
+				$applicantID = $row[1];
+				$applicanttele = $row[2];
+
+				echo '<tr>
+						<td>'. $applicantFullname. '</td>
+						<td>'. $applicantID. '</td>
+						<td>'. $applicanttele. '</td>
+					</tr>';
+			}
+		}
+	}
 
 
 

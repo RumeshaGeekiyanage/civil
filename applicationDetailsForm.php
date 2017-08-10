@@ -10,9 +10,12 @@
     $permissionToAccessLevel = $userLevel; 
 
     include_once("checkPermission.php");
-    include_once("showApplications.php");
+    //include_once("showApplications.php");
 
     new CheckPermission($userLevel, $permissionToAccessLevel);
+	
+	include_once("newApplicantDetails.php");
+	$newA = new newApplicantDetails();
 ?>
 
 <!DOCTYPE HTML>
@@ -99,49 +102,25 @@
                                 <div class="panel-heading"><span class="badge">1</span> Applicant Details</div>
                                 <div class="panel-body">
                                     <table class="table table-bordered table-hover">
-                                        <tbody>
+                                        <thead>
                                             <!-- Applicant Details -->
                                             <tr>
-                                                <td>Applicant's full name</td>
-                                                <td><?php echo "A. W. Wickramarathne"; ?></td>
+												<th>Applicant Id</th>
+                                                <th>Applicant's full name</td>
+                                                <th>Address</th>
+                                                <th>Telephone number</th>
+                                                <th>Date of Birth</th>
+                                                <th>Gender </th>
+                                                <th>Civil Status</th>
+                                                <th>Number of Children</th>
+                                                <th>Applicant is a citizen of Sri Lanka?</th>
+                                                <th>National Identity Card No</th>
+                                                <th>NIC Date of issue</th>  
                                             </tr>
-                                            <tr>
-                                                <td>Address</td>
-                                                <td><?php echo "150/B, Kusum Niwasa, 6th Lane, Nawala, Nugegoda, Sri Lanka"; ?></td>
-                                            </tr>
-                                            <tr>
-                                                <td>Telephone number</td>
-                                                <td><?php ?></td>
-                                            </tr>
-                                            <tr>
-                                                <td>Date of Birth</td>
-                                                <td><?php ?></td>
-                                            </tr>
-                                            <tr>
-                                                <td>Gender </td>
-                                                <td><?php ?></td>
-                                            </tr>
-                                            <tr>
-                                                <td>Civil Status</td>
-                                                <td><?php ?></td>
-                                            </tr>
-                                            <tr>
-                                                <td>Number of Children</td>
-                                                <td><?php ?></td>
-                                            </tr>
-                                            <tr>
-                                                <td>Applicant is a citizen of Sri Lanka?</td>
-                                                <td><?php ?></td>
-                                            </tr>
-                                            <tr>
-                                                <td>National Identity Card No</td>
-                                                <td><?php ?></td>
-                                            </tr>
-                                            <tr>
-                                                <td>NIC Date of issue</td>
-                                                <td><?php ?></td>
-                                            </tr>
-                                        </tbody>
+                                        </thead>
+										<tbody>
+											<?php $newA->applicantDetails(); ?>
+										<tbody>
                                     </table>
                                 </div>
                             </div>
@@ -150,21 +129,18 @@
                                 <div class="panel-heading"><span class="badge">2</span> Living</div>
                                 <div class="panel-body">
                                     <table class="table table-bordered table-hover">
-                                        <tbody>
+                                        <thead>
                                             <!-- Living -->
                                             <tr>
-                                                <td>District</td>
-                                                <td>Colombo</td>
+												<th>Applicant ID</th>
+                                                <th>District</th>  
+                                                <th>Grama Niladhari Division</th>
+                                                <th>Police Area</th>
                                             </tr>
-                                            <tr>
-                                                <td>Grama Niladhari Division</td>
-                                                <td><?php ?></td>
-                                            </tr>
-                                            <tr>
-                                                <td>Police Area</td>
-                                                <td><?php ?></td>
-                                            </tr>
-                                        </tbody>
+                                        </thead>
+										<tbody>
+											<?php $newA->livingDetails(); ?>
+										</tbody>
                                     </table>
                                 </div>
                             </div>  
@@ -173,25 +149,19 @@
                                 <div class="panel-heading"><span class="badge">3</span> Working</div>
                                 <div class="panel-body">
                                     <table class="table table-bordered table-hover">
-                                        <tbody>
+                                        <thead>
                                             <!-- Working -->
                                             <tr>
-                                                <td>Occupation</td>
-                                                <td>Teaching</td>
-                                            </tr> 
-                                            <tr>
-                                                <td>Average annual income</td>
-                                                <td><?php ?></td>
+												<th>Applicant ID </th>
+                                                <th>Occupation</th>
+                                                <th>Average annual income</th>
+                                                <th>Applicant is a tax payer?</th>
+                                                <th>Tax number</th>
                                             </tr>
-                                            <tr>
-                                                <td>Applicant is a tax payer?</td>
-                                                <td><?php ?></td>
-                                            </tr>
-                                            <tr>
-                                                <td>Tax number</td>
-                                                <td><?php ?></td>
-                                            </tr>
-                                        </tbody>
+                                        </thead>
+										<tbody>
+											<?php $newA->workingDetails(); ?>
+										</tbody>
                                     </table>
                                 </div>
                             </div>
@@ -200,21 +170,19 @@
                                 <div class="panel-heading"><span class="badge">4</span> Charged or convicted for any offence by a Court of Law?&nbsp;<strong>Yes</strong></div>
                                 <div class="panel-body">
                                     <table class="table table-bordered table-hover">
-                                        <tbody>
+                                        <thead>
                                             <!-- Offence -->
                                             <tr>
+												<th>Applicant ID</th>
                                                 <th>Year</th>
                                                 <th>Court</th>
                                                 <th>Offence</th>
                                                 <th>Judgement</th>
                                             </tr>
-                                            <tr>
-                                                <td>2001</td>
-                                                <td>Magistrate</td>
-                                                <td>Assault</td>
-                                                <td>6 months</td>
-                                            </tr>
-                                        </tbody>
+                                        </thead>
+										<tbody>
+											<?php $newA->courtDetails(); ?>
+										</tbody>
                                     </table>
                                 </div>
                             </div>
@@ -223,37 +191,22 @@
                                 <div class="panel-heading"><span class="badge">5</span> Reason for requisition of a gun?&nbsp;<strong>Cultivation</strong></div>
                                 <div class="panel-body">
                                     <table class="table table-bordered table-hover">
-                                        <tbody>
+                                        <thead>
                                             <!-- Reason -->
                                             <tr>
-                                                <td>Name of the land</td>
-                                                <td>Millagahawatte</td>
+												<th>Applicant ID</th>
+                                                <th>Name of the land</th>
+                                                <th>District</th>
+                                                <th>Extent of the land in Acres</th>
+												<th>Acreage of the cultivated land</th>
+                                                <th>Crop</th>
+                                                <th>Animals who cause the Damage</th>
+                                                <th>Loss incurred during this year</th>
                                             </tr>
-                                            <tr>
-                                                <td>District</td>
-                                                <td><?php ?></td>
-                                            </tr>
-                                            <tr>
-                                                <td>Extent of the land in Acres</td>
-                                                <td><?php ?></td>
-                                            </tr>
-                                            <tr>
-                                                <td>Crop</td>
-                                                <td><?php ?></td>
-                                            </tr>
-                                            <tr>
-                                                <td>Acreage of the cultivated land</td>
-                                                <td><?php ?></td>
-                                            </tr>
-                                            <tr>
-                                                <td>Animals who cause the Damage</td>
-                                                <td><?php ?></td>
-                                            </tr>
-                                            <tr>
-                                                <td>Loss incurred during this year</td>
-                                                <td><?php ?></td>
-                                            </tr>
-                                        </tbody>
+                                        </thead>
+										<tbody>
+											<?php $newA->cultivationDetails(); ?>
+										</tbody>
                                     </table>
                                 </div>
                             </div>
@@ -262,29 +215,20 @@
                                 <div class="panel-heading"><span class="badge">5</span> Reason for requisition of a gun?&nbsp;<strong>Livestock</strong></div>
                                 <div class="panel-body">
                                     <table class="table table-bordered table-hover">
-                                        <tbody>
+                                        <thead>
                                             <!-- Reason -->
                                             <tr>
-                                                <td>Name of the farm</td>
-                                                <td>Hatton Milk Farm</td>
+												<th>Applicant ID </th>
+                                                <th>Name of the farm</th>
+                                                <th>District, Divisional Secretary Area, and Grama Sevaka Area where the land is situated</td>
+                                                <th>Type of Livestock</th>
+                                                <th>Gross value of the Farm</th>
+                                                <th>Loss incurred during this year by animals</th>
                                             </tr>
-                                            <tr>
-                                                <td>District, Divisional Secretary Area, and Grama Sevaka Area where the land is situated</td>
-                                                <td><?php ?></td>
-                                            </tr>
-                                            <tr>
-                                                <td>Type of Livestock</td>
-                                                <td><?php ?></td>
-                                            </tr>
-                                            <tr>
-                                                <td>Gross value of the Farm</td>
-                                                <td><?php ?></td>
-                                            </tr>
-                                            <tr>
-                                                <td>Loss incurred during this year by animals</td>
-                                                <td><?php ?></td>
-                                            </tr>
-                                        </tbody>
+                                        </thead>
+										<tbody>
+											<?php $newA->livestockdetails(); ?>
+										</tbody>
                                     </table>
                                 </div>
                             </div>       
@@ -294,37 +238,21 @@
                                 <div class="panel-heading"><span class="badge">6</span> Whether Guns are transferred or stolen by somebody?&nbsp;<strong>No</strong></div>
                                 <div class="panel-body">
                                     <table class="table table-bordered table-hover">
-                                        <tbody>
+                                        <thead>
                                             <!-- Stolen Transferred-->
                                             <tr>
-                                                <td>Stolen or Transferred date</td>
-                                                <td><?php ?></td>
+                                                <th>Stolen or Transferred date</th>
+                                                <th>Particulars of the gun</th>
+                                                <th>Licence No</th>
+                                                <th>To whom it was handed over or transferred</th>
+                                                <th>Details of the receipts. if any</th>
+                                                <th>Particulars of the guns transferred or stolen by somebody</th>
+                                                <th>Whether a proper entry was made if the Gun was stolen</th>
                                             </tr>
-                                            <tr>
-                                                <td>Particulars of the gun</td>
-                                                <td>32 Calliber</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Licence No</td>
-                                                <td><?php ?></td>
-                                            </tr>
-                                            <tr>
-                                                <td>To whom it was handed over or transferred</td>
-                                                <td>A. B. Ranjith Perera</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Details of the receipts. if any</td>
-                                                <td><?php ?></td>
-                                            </tr>
-                                            <tr>
-                                                <td>Particulars of the guns transferred or stolen by somebody</td>
-                                                <td><?php ?></td>
-                                            </tr>
-                                            <tr>
-                                                <td>Whether a proper entry was made if the Gun was stolen</td>
-                                                <td><?php ?></td>
-                                            </tr>
-                                        </tbody>
+                                        </thead>
+										<tbody>
+											<?php $newA->transferStolenGunDetails(); ?>
+										</tbody>
                                     </table>
                                 </div>
                             </div>        

@@ -33,7 +33,7 @@
     <script src = "js/custom.js"></script>
     <script >
         
-    $(document).ready(function() {
+    /*$(document).ready(function() {
 
         $("#marryDiv").hide();
         $("#single").click(function(){ 
@@ -43,7 +43,7 @@
             $("#marryDiv").show();
         });
 
-    });
+    });*/
 
     </script>
 
