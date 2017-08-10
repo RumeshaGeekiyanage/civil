@@ -8,7 +8,7 @@
 
 
 		
-		function __construct($userLevel, $permissionLevel) {
+		function __rconstruct($userLevel, $permissionLevel) {
 			$this->checkPermission($userLevel, $permissionLevel);
 		}
 	}

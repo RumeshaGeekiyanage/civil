@@ -11,7 +11,7 @@ $(document).ready(function(){
     $("#gunsPossDiv").hide();
     $("#stolenTransDiv").hide();
     $("#nicDiv").hide();
-	$("#citizenDiv").hide();
+	$("#marryDiv").hide();
 
 
 
@@ -77,12 +77,21 @@ $(document).ready(function(){
     $("#stolenTransY").click(function(){
         $("#stolenTransDiv").show();
     });
-
+	$("#single").click(function(){
+		alert("gdsjh");	
+        $("#marryDiv").hide();
+    });
+    $("#married").click(function(){
+		alert("gdsjh");	
+        $("#marryDiv").show();
+    });
     $("#citizenN").click(function(){
-        $("#nicDiv").hide();
+		alert("sjsjsjjs");
+        //$("#nicDiv").hide();
     });
     $("#citizenY").click(function(){
-        $("#nicDiv").show();
+		alert("sjsjsjjs");
+        //$("#nicDiv").show();
     });
 	
 

@@ -217,7 +217,7 @@ header {
     border-radius: 5px;
     padding: 2px;
     width: 22.5%;
-    float: left;
+    float:left;
     margin: 1%;
     box-shadow: -6px 0px 20px -2px #8c8b8b, 6px 0px 20px -2px #8c8b8b;
     transition: all .3s ease-in-out;
@@ -228,7 +228,7 @@ header {
 }
 
 #innerContainerDiv img {
-    width: 100%;
+    width: 90%;
     border-radius: 5px;
 }
 

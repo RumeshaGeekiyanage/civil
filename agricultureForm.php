@@ -31,21 +31,22 @@
     <script src = "js/jquery-3.1.0.min.js"></script>
     <script src = "js/app.js"></script>
     <script src = "js/custom.js"></script>
-	
-	<script>
-		$(document).ready(function(){
-			
-			$("#citizenDiv").hide();
-			
-			$("#single").click(function(){
-			$("#citizenDiv").hide();
-			});
-			$("#married").click(function(){
-				$("#citizenDiv").show();
-			});
-		}
-	</script>
-	
+    <script >
+        
+    $(document).ready(function() {
+
+        $("#marryDiv").hide();
+        $("#single").click(function(){ 
+            $("#marryDiv").hide();
+        });
+        $("#married").click(function(){ 
+            $("#marryDiv").show();
+        });
+
+    });
+
+    </script>
+
 </head>
 
 <body>
@@ -83,9 +84,9 @@
                 <input type="radio" name="1civilStatus" value="1" id="married"> Married
                 <input type="radio" name="1civilStatus" value="0" id="single" checked> Single
             </label><br/>
-			<div id = "citizenDiv">
-				<label>Number of Children<input type="text" name="1numchildren" ></label>
-			</div>
+            <div id="marryDiv">
+            <label>Number of Children<input type="text" name="1numchildren" placeholder="Number of Children" ></label>
+            </div>
             <br/>
             <label> <h3> Whether the applicant is a citizen of Sri Lanka ?</h3><br>
                 <input type="radio" name="1citizen" value="1" id = "citizenY"> Yes

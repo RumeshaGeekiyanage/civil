@@ -69,8 +69,9 @@
                 <a class="navbar-brand" href="sCHome.php"><i class="fa fa-home fa-lg" aria-hidden="true"></i></a>
             </div>
             <!-- Top Menu Items -->
+            <!--message drop down--> 
             <ul class="nav navbar-right top-nav">
-                <!--li class="dropdown">
+                <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-envelope"></i> <b class="caret"></b></a>
                     <ul class="dropdown-menu message-dropdown">
                         <li class="message-preview">
@@ -122,8 +123,9 @@
                             <a href="#">Read All New Messages</a>
                         </li>
                     </ul>
-                </li-->
-                <!--li class="dropdown">
+                </li>
+                <!-- bell sign -->
+                <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bell"></i> <b class="caret"></b></a>
                     <ul class="dropdown-menu alert-dropdown">
                         <li>
@@ -149,11 +151,12 @@
                             <a href="#">View All</a>
                         </li>
                     </ul>
-                </li-->
+                </li>
+                <!-- profile -->
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> <?php echo $fullName; ?> <b class="caret"></b></a>
                     <ul class="dropdown-menu">
-                        <!--li>
+                        <li>
                             <a href="#"><i class="fa fa-fw fa-user"></i> Profile</a>
                         </li>
                         <li>
@@ -161,7 +164,7 @@
                         </li>
                         <li>
                             <a href="#"><i class="fa fa-fw fa-gear"></i> Settings</a>
-                        </li-->
+                        </li>
                         <li class="divider"></li>
                         <li>
                             <a href="logout.php"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
@@ -305,40 +308,7 @@
                     </div>
                     <!-- /.row -->
 
-
                     <div class = "container-fluid">
-					
-						<!--Approved List in the middle-->
-						<div class = "row">
-                            <div class="panel-group">
-                                <div class="panel panel-default">
-                                    <div class="panel-heading">
-                                        <h4 class="panel-title">
-                                            <a data-toggle="collapse" href="#collapse2"><i class="fa fa-fw fa-check-square-o"></i> Approved List</a>
-                                        </h4>
-                                    </div>
-                                    <div id="collapse2" class="panel-collapse collapse">
-                                        <div class="panel-body">
-                                            <table class="table table-hover"">
-                                                <thead>
-                                                    <tr>
-                                                        <th>Application No</th>
-                                                        <th>Name</th>
-                                                        <th>Category</th>
-                                                        <th>Approved Date</th>
-                                                        <th></th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody class = "table-hover">
-                                                    <?php $SAOb->approvedList(); ?>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-						</div>
-					
                         <div class = "row">
                             <div class="panel-group">
                                 <div class="panel panel-default">
@@ -361,6 +331,36 @@
                                                 </thead>
                                                 <tbody class = "table-hover">
                                                     <?php $SAOb->returnedList(); ?>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class = "row">
+                            <div class="panel-group">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a data-toggle="collapse" href="#collapse2"><i class="fa fa-fw fa-check-square-o"></i> Approved List</a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapse2" class="panel-collapse collapse">
+                                        <div class="panel-body">
+                                            <table class="table table-hover"">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Application No</th>
+                                                        <th>Name</th>
+                                                        <th>Category</th>
+                                                        <th>Approved Date</th>
+                                                        <th></th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody class = "table-hover">
+                                                    <?php $SAOb->approvedList(); ?>
                                                 </tbody>
                                             </table>
                                         </div>
@@ -446,7 +446,6 @@
                                                         <th>Category</th>
                                                         <th>Date</th>
                                                         <th>Authentications</th>
-														<th></th>
                                                     </tr>
                                                 </thead>
                                                 <tbody class = "table-hover">
@@ -456,7 +455,9 @@
                                                         <td>Agriculture</td>
                                                         <td>08.08.2016</td>
                                                         <td>No</td>
+                                                    </tr>
                                                     </tr-->
+
                                                     <?php $SAOb->pendingDocuments(); ?>
                                                 </tbody>
                                             </table>

@@ -54,14 +54,15 @@ class DBOperations {
 
 		if($condition == false) {
 			$query = "SELECT $implodedFields FROM $table";
-			//echo $query;
 		} else {
 			$query = "SELECT $implodedFields FROM $table WHERE $condition";
 			//echo $query;
 		}
-	
+
+
 		$result = mysqli_query($conn, $query);
-		
+		//echo $result;
+
 		if(mysqli_num_rows($result) > 0) {
 			$a = 0;
 			while($row = mysqli_fetch_array($result)) {
