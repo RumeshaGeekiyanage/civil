@@ -1,0 +1,66 @@
+<style>
+    /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      margin-bottom: 10px;
+      border-radius: 0;
+    }
+    
+    /* Add a gray background color and some padding to the footer */
+    footer {
+      background-color: #f2f2f2;
+      padding: 25px;
+    }
+
+    .intro-left{
+    background: #004d4d;
+    min-height: 140px;
+    margin-top: -5px;
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-bottom: -1px;
+    padding: 25px;
+    transition: all .3s ease-in-out;
+     box-shadow: -6px 0px 20px -2px #8c8b8b, 6px 0px 20px -2px white;
+     border-radius: 5px;
+
+    body{
+    text-align:center;
+    font-family:'Segoe UI Light', 'Segoe UI', 'Open sans', Arial, Sans;
+    font-size: 60px;
+    font-weight: bold;
+
+    
+    
+}
+
+.intro-left h4{
+  color: white;
+}
+
+
+h4 {
+  color:white;
+}
+
+
+}
+a:hover{
+    color:white;
+}
+
+
+
+.intro-left:hover {
+    transform: scale(1.1);
+}
+
+
+.navbar {
+      margin-bottom: 3px;
+      margin
+      border-radius: 0;
+    }
+
+
+
+  </style>
