@@ -1,3 +1,20 @@
+
+
+<!--html>
+
+<head>
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.css" />
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="bootstrap/css/bootstrap-grid.css" />
+	<link rel="stylesheet" href="bootstrap/css/bootstrap-grid.min.css" />
+	<link rel="stylesheet" href="bootstrap/css/bootstrap-reboot.css" />
+	<link rel="stylesheet" href="bootstrap/css/bootstrap-reboot.min.css" />
+	<script src="bootstrap/css/bootstrap.js"></script>
+	<script src="bootstrap/css/bootstrap.min.js"></script>
+</head>
+
+</html-->
+
 <?php
 class newApplicantDetails {
 	public $DBOb;
@@ -247,6 +264,211 @@ class newApplicantDetails {
 						<td>'. $livestocktype. '</td>
 						<td>'. $farmvalue. '</td>
 						<td>'. $loss. '</td>
+					</tr>';
+			}
+		}
+	}
+	
+	function transferStolenGunDetails() {
+		$DBOb = $this->DBOb;
+
+		$table = "stolen_transferred";
+		$fields = ["t_id", "a_id", "transfer_date", "gun_parti", "licence_no", "transf_to", "receipts", "entry_made"];
+		$condition = false;
+
+		$table2 = "applicant";
+		$fields2 = ["stolen_trans"];
+
+		$selectedData = $DBOb->select($table, $fields, $condition);
+
+		if(!empty($selectedData)) {
+			foreach ($selectedData as $row) {
+				$transferID = $row[0];
+				$aID = $row[1];
+				$transferdate = $row[2];
+				$gunparti = $row[3];
+				$licenceno = $row[4];
+				$transferto = $row[5];
+				$receipts = $row[6];
+				$entrymade = $row[7];
+
+				$condition2 = "a_id = '". $transferID. "'";
+				$selectedData = $DBOb->select($table2, $fields2, $condition2);
+
+				$stolentrans = $selectedData[0][0];
+				
+				if($stolentrans == 0){
+					$stolentrans  = "Stolen";
+				}
+				else{
+					$stolentrans  = "Transferred";
+				}
+				if($entrymade == 1){
+					$entrymade = "Yes";
+				}
+				else{
+					$entrymade = "No";
+				}
+
+				echo '<tr>
+						<td>'. $transferID. '</td>
+						<td>'. $transferdate. '</td>
+						<td>'. $gunparti. '</td>
+						<td>'. $licenceno. '</td>
+						<td>'. $transferto. '</td>
+						<td>'. $receipts. '</td>
+						<td>'. $stolentrans. '</td>
+						<td>'. $entrymade. '</td>
+					</tr>';
+			}
+		}
+	}
+	
+	function acquisitionDetails() {
+		$DBOb = $this->DBOb;
+
+		$table = "temp_guns_posse";
+		$fields = ["pos_id", "acq_date", "type_nbr", "licence_no"];
+		$condition = false;
+
+		$table2 = "applicant";
+		$fields2 = ["guns_in_poss"];
+
+		$selectedData = $DBOb->select($table, $fields, $condition);
+
+		if(!empty($selectedData)) {
+			foreach ($selectedData as $row) {
+				$possessionID = $row[0];
+				$acqDate = $row[1];
+				$typeNBR = $row[2];
+				$licenceno = $row[3];
+
+				$condition2 = "a_id = '". $possessionID. "'";
+				$selectedData = $DBOb->select($table2, $fields2, $condition2);
+
+				$gunsPossession = $selectedData[0][0];			
+
+				echo '<tr>
+						<td>'. $possessionID. '</td>
+						<td>'. $acqDate. '</td>
+						<td>'. $typeNBR. '</td>
+						<td>'. $licenceno. '</td>
+					</tr>';
+			}
+		}
+	}
+	
+	function officialDutiesDetails() {
+		$DBOb = $this->DBOb;
+
+		$table = "official_weapon";
+		$fields = ["ow_id", "a_id", "type_nbr", "licence_no"];
+		$condition = false;
+
+		$table2 = "applicant";
+		$fields2 = ["official_weapon"];
+
+		$selectedData = $DBOb->select($table, $fields, $condition);
+
+		if(!empty($selectedData)) {
+			foreach ($selectedData as $row) {
+				$WeaponID = $row[0];
+				$typeNBR = $row[2];
+				$licenceno = $row[3];
+
+				$condition2 = "a_id = '". $WeaponID. "'";
+				$selectedData = $DBOb->select($table2, $fields2, $condition2);
+
+				$officialWeapon = $selectedData[0][0];			
+
+				echo '<tr>
+						<td>'. $WeaponID. '</td>
+						<td>'. $typeNBR. '</td>
+						<td>'. $licenceno. '</td>
+					</tr>';
+			}
+		}
+	}
+	
+	function authenticationDetails() {
+		$DBOb = $this->DBOb;
+
+		$table = "authentication";
+		$fields = ["au_id", "gn_certificate", "police_certificate", "dv_secretary_certificate", "dis_secretary_certificate", "ad_md_secretary_certificate", "md_secretary_certificate"];
+		$condition = false;
+
+		$table2 = "application";
+		$fields2 = ["authentications"];
+
+		$selectedData = $DBOb->select($table, $fields, $condition);
+
+		if(!empty($selectedData)) {
+			foreach ($selectedData as $row) {
+				$authenticationID = $row[0];
+				$GNcertificate = $row[1];
+				$policeCertificate = $row[2];
+				$dvSecretaryCertificate = $row[3];
+				$disSecretaryCertificate = $row[4];
+				$adMdSecreteryCertificate = $row[5];
+				$mdSecreteryCertificate = $row[6];
+
+				$condition2 = "a_id = '". $authenticationID. "'";
+				$selectedData = $DBOb->select($table2, $fields2, $condition2);
+
+				$authentication = $selectedData[0][0];		
+
+				if($authentication == 1){
+					$authentication = "Yes";
+				}
+				else{
+					$authentication = "No";
+				}
+				if($GNcertificate == 1){
+					$GNcertificate =  "Yes";
+				}
+				else{
+					$GNcertificate =  "No";
+				}
+				if($policeCertificate == 1){
+					$policeCertificate = "Yes";
+				}
+				else{
+					$policeCertificate = "No";
+				}
+				if($dvSecretaryCertificate == 1){
+					$dvSecretaryCertificate = "Yes";
+				}
+				else{
+					$dvSecretaryCertificate = "No";
+				}
+				if($disSecretaryCertificate == 1){
+					$disSecretaryCertificate = "Yes";
+				}
+				else{
+					$disSecretaryCertificate = "No";
+				}
+				if($adMdSecreteryCertificate == 1){
+					$adMdSecreteryCertificate = "Yes";
+				}
+				else{
+					$adMdSecreteryCertificate = "No";
+				}
+				if($mdSecreteryCertificate == 1){
+					$mdSecreteryCertificate = "Yes";
+				}
+				else{
+					$mdSecreteryCertificate = "No";
+				}
+
+				echo '<tr>
+						<td>'. $authenticationID. '</td>
+						<td>'. $authentication. '</td>
+						<td>'. $GNcertificate. '</td>
+						<td>'. $policeCertificate. '</td>
+						<td>'. $dvSecretaryCertificate. '</td>
+						<td>'. $disSecretaryCertificate. '</td>
+						<td>' .$adMdSecreteryCertificate. '</td>
+						<td>'. $mdSecreteryCertificate. '</td>
 					</tr>';
 			}
 		}

@@ -241,6 +241,7 @@
                                         <thead>
                                             <!-- Stolen Transferred-->
                                             <tr>
+												<th>Applicant ID </th>
                                                 <th>Stolen or Transferred date</th>
                                                 <th>Particulars of the gun</th>
                                                 <th>Licence No</th>
@@ -261,19 +262,18 @@
                                 <div class="panel-heading"><span class="badge">7</span> Whether Guns are already in Possession?&nbsp;<strong>Yes</strong></div>
                                 <div class="panel-body">
                                     <table class="table table-bordered table-hover">
-                                        <tbody>
+                                        <thead>
                                             <!-- Guns in possession -->
                                             <tr>
+												<th>Applicant ID</th>
                                                 <th>Date of acquisition</th>
                                                 <th>Type & number of the Gun</th>
                                                 <th>Licence no</th>
                                             </tr>
-                                            <tr>
-                                                <td>2000-05-10</td>
-                                                <td>32 Calliber</td>
-                                                <td>124534Z</td>
-                                            </tr>
-                                        </tbody>
+                                        </thead>
+										<tbody>
+											<?php $newA->acquisitionDetails(); ?>
+										</tbody>
                                     </table>
                                 </div>
                             </div>
@@ -282,23 +282,43 @@
                                 <div class="panel-heading"><span class="badge">8</span> Applicant possesses a weapon issued for official duties?&nbsp;<strong>No</strong></div>
                                 <div class="panel-body">
                                     <table class="table table-bordered table-hover">
-                                        <tbody>
+                                        <thead>
                                             <!-- Official Weapon -->
                                             <tr>
-                                                <td>Type & Number of the Gun</td>
-                                                <td>32 Calliber</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Licence no</td>
-                                                <td><?php ?></td>
-                                            </tr>
-                                        </tbody>
+												<th>Applicant ID</th>
+                                                <th>Type & Number of the Gun</th>
+                                                <th>Licence no</th>
+											</tr>
+                                        </thead>
+										<tbody>
+											<?php $newA->officialDutiesDetails(); ?>
+										</tbody>
                                     </table>
                                 </div>
                             </div>  
 
                             <div class="panel panel-warning">
                                 <div class="panel-heading"><span class="badge">9</span> Authentications?&nbsp;<strong>Not completed</strong></div>
+								<div class="panel-body">
+                                    <table class="table table-bordered table-hover">
+                                        <thead>
+                                            <!-- Official Weapon -->
+                                            <tr>
+												<th>Applicant ID</th>
+												<th>Authentication Completed</th>
+                                                <th>Grama Niladhari Certificate</th>
+												<th>Police Certificate</th>
+                                                <th>Divisional Secretary Certificate</th>
+												<th>District Secretary Certificate</th>
+												<th>Ministry of Defence Additional Secretary Certificate</th>
+												<th>Ministry of Defence  Secretary Certificate</th>
+											</tr>
+                                        </thead>
+										<tbody>
+											<?php $newA->authenticationDetails(); ?>
+										</tbody>
+                                    </table>
+                                </div>
                             </div>
 
                             <div class="panel panel-default">
