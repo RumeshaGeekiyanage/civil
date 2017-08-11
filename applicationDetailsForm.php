@@ -44,13 +44,6 @@
 
     <link rel = "stylesheet" type =" text/css" href = "css/customStyle3.css">
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
 </head>
 
 <body>
@@ -192,7 +185,7 @@
                                 <div class="panel-body">
                                     <table class="table table-bordered table-hover">
                                         <thead>
-                                            <!-- Reason -->
+                                            <!-- cultivation -->
                                             <tr>
 												<th>Applicant ID</th>
                                                 <th>Name of the land</th>
@@ -216,7 +209,7 @@
                                 <div class="panel-body">
                                     <table class="table table-bordered table-hover">
                                         <thead>
-                                            <!-- Reason -->
+                                            <!-- Requisition -->
                                             <tr>
 												<th>Applicant ID </th>
                                                 <th>Name of the farm</th>
@@ -302,7 +295,7 @@
 								<div class="panel-body">
                                     <table class="table table-bordered table-hover">
                                         <thead>
-                                            <!-- Official Weapon -->
+                                            <!-- Authentication -->
                                             <tr>
 												<th>Applicant ID</th>
 												<th>Authentication Completed</th>

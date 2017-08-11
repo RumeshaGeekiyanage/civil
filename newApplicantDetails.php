@@ -1,20 +1,3 @@
-
-
-<!--html>
-
-<head>
-	<link rel="stylesheet" href="bootstrap/css/bootstrap.css" />
-	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
-	<link rel="stylesheet" href="bootstrap/css/bootstrap-grid.css" />
-	<link rel="stylesheet" href="bootstrap/css/bootstrap-grid.min.css" />
-	<link rel="stylesheet" href="bootstrap/css/bootstrap-reboot.css" />
-	<link rel="stylesheet" href="bootstrap/css/bootstrap-reboot.min.css" />
-	<script src="bootstrap/css/bootstrap.js"></script>
-	<script src="bootstrap/css/bootstrap.min.js"></script>
-</head>
-
-</html-->
-
 <?php
 class newApplicantDetails {
 	public $DBOb;
@@ -31,7 +14,13 @@ class newApplicantDetails {
 
 		$table = "applicant";
 		$fields = ["a_id", "full_name", "address", "telephone", "dob", "gender", "civil_status", "no_of_children", "citizenship", "nic", "nic_issue_date"];
-		$condition = false;
+		$id = $_GET['id'];
+		if(isset($id)){
+			$condition = "a_id = '". $id. "'";
+		}
+		else{
+			$condition = false;
+		}
 
 		$selectedData = $DBOb->select($table, $fields, $condition);
 
@@ -92,7 +81,14 @@ class newApplicantDetails {
 
 		$table = "applicant";
 		$fields = ["a_id", "district", "grama_n", "police_area"];
-		$condition = false;
+		//$condition = false;
+		$id = $_GET['id'];
+		if(isset($id)){
+			$condition = "a_id = '". $id. "'";
+		}
+		else{
+			$condition = false;
+		}
 
 		$selectedData = $DBOb->select($table, $fields, $condition);
 
@@ -118,7 +114,14 @@ class newApplicantDetails {
 
 		$table = "applicant";
 		$fields = ["a_id", "occupation", "avg_income", "tax_payer", "tax_no"];
-		$condition = false;
+		//$condition = false;
+		$id = $_GET['id'];
+		if(isset($id)){
+			$condition = "a_id = '". $id. "'";
+		}
+		else{
+			$condition = false;
+		}
 
 		$selectedData = $DBOb->select($table, $fields, $condition);
 
@@ -153,7 +156,14 @@ class newApplicantDetails {
 
 		$table = "offence";
 		$fields = ["o_id", "a_id", "year", "court_name", "offence", "judgement"];
-		$condition = false;
+		//$condition = false;
+		$id = $_GET['id'];
+		if(isset($id)){
+			$condition = "a_id = '". $id. "'";
+		}
+		else{
+			$condition = false;
+		}
 
 		$table2 = "applicant";
 		$fields2 = ["offence"];
@@ -190,7 +200,14 @@ class newApplicantDetails {
 
 		$table = "cultivation";
 		$fields = ["c_id", "a_id", "land_name", "district", "acres", "crop", "acres_culti_land", "animals", "loss"];
-		$condition = false;
+		//$condition = false;
+		$id = $_GET['id'];
+		if(isset($id)){
+			$condition = "a_id = '". $id. "'";
+		}
+		else{
+			$condition = false;
+		}
 
 		$table2 = "applicant";
 		$fields2 = ["a_id"];
@@ -235,7 +252,14 @@ class newApplicantDetails {
 
 		$table = "livestock";
 		$fields = ["l_id", "a_id", "farm_name", "district_ds_gs", "livestock_type", "farm_value", "loss"];
-		$condition = false;
+		//$condition = false;
+		$id = $_GET['id'];
+		if(isset($id)){
+			$condition = "a_id = '". $id. "'";
+		}
+		else{
+			$condition = false;
+		}
 
 		$table2 = "applicant";
 		$fields2 = ["a_id"];
@@ -274,7 +298,14 @@ class newApplicantDetails {
 
 		$table = "stolen_transferred";
 		$fields = ["t_id", "a_id", "transfer_date", "gun_parti", "licence_no", "transf_to", "receipts", "entry_made"];
-		$condition = false;
+		//$condition = false;
+		$id = $_GET['id'];
+		if(isset($id)){
+			$condition = "a_id = '". $id. "'";
+		}
+		else{
+			$condition = false;
+		}
 
 		$table2 = "applicant";
 		$fields2 = ["stolen_trans"];
@@ -329,7 +360,14 @@ class newApplicantDetails {
 
 		$table = "temp_guns_posse";
 		$fields = ["pos_id", "acq_date", "type_nbr", "licence_no"];
-		$condition = false;
+		//$condition = false;
+		$id = $_GET['id'];
+		if(isset($id)){
+			$condition = "a_id = '". $id. "'";
+		}
+		else{
+			$condition = false;
+		}
 
 		$table2 = "applicant";
 		$fields2 = ["guns_in_poss"];
@@ -363,7 +401,14 @@ class newApplicantDetails {
 
 		$table = "official_weapon";
 		$fields = ["ow_id", "a_id", "type_nbr", "licence_no"];
-		$condition = false;
+		//$condition = false;
+		$id = $_GET['id'];
+		if(isset($id)){
+			$condition = "a_id = '". $id. "'";
+		}
+		else{
+			$condition = false;
+		}
 
 		$table2 = "applicant";
 		$fields2 = ["official_weapon"];
@@ -395,7 +440,14 @@ class newApplicantDetails {
 
 		$table = "authentication";
 		$fields = ["au_id", "gn_certificate", "police_certificate", "dv_secretary_certificate", "dis_secretary_certificate", "ad_md_secretary_certificate", "md_secretary_certificate"];
-		$condition = false;
+		//$condition = false;
+		$id = $_GET['id'];
+		if(isset($id)){
+			$condition = "a_id = '". $id. "'";
+		}
+		else{
+			$condition = false;
+		}
 
 		$table2 = "application";
 		$fields2 = ["authentications"];
@@ -424,40 +476,40 @@ class newApplicantDetails {
 					$authentication = "No";
 				}
 				if($GNcertificate == 1){
-					$GNcertificate =  "Yes";
+					$GNcertificate =  "&#10004";
 				}
 				else{
-					$GNcertificate =  "No";
+					$GNcertificate =  "&#x2718";
 				}
 				if($policeCertificate == 1){
-					$policeCertificate = "Yes";
+					$policeCertificate = "&#10004";
 				}
 				else{
-					$policeCertificate = "No";
+					$policeCertificate = "&#x2718";
 				}
 				if($dvSecretaryCertificate == 1){
-					$dvSecretaryCertificate = "Yes";
+					$dvSecretaryCertificate = "&#10004";
 				}
 				else{
-					$dvSecretaryCertificate = "No";
+					$dvSecretaryCertificate = "&#x2718";
 				}
 				if($disSecretaryCertificate == 1){
-					$disSecretaryCertificate = "Yes";
+					$disSecretaryCertificate = "&#10004";
 				}
 				else{
-					$disSecretaryCertificate = "No";
+					$disSecretaryCertificate = "&#x2718";
 				}
 				if($adMdSecreteryCertificate == 1){
-					$adMdSecreteryCertificate = "Yes";
+					$adMdSecreteryCertificate = "&#10004";
 				}
 				else{
-					$adMdSecreteryCertificate = "No";
+					$adMdSecreteryCertificate = "&#x2718";
 				}
 				if($mdSecreteryCertificate == 1){
-					$mdSecreteryCertificate = "Yes";
+					$mdSecreteryCertificate = "&#10004";
 				}
 				else{
-					$mdSecreteryCertificate = "No";
+					$mdSecreteryCertificate = "&#x2718";
 				}
 
 				echo '<tr>
