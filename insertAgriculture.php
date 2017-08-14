@@ -9,6 +9,7 @@ class InsertAgriFormData {
 	function includeDB() {
 		include_once("dbOperations.php");
 		$DBObject = new DBOperations();
+		
 
 		$this->DBOb = $DBObject;
 	}

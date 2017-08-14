@@ -11,6 +11,21 @@
 
     include_once("checkPermission.php");
     new CheckPermission($userLevel, $permissionToAccessLevel);
+	
+	//include_once("dbOperations.php");
+	//$DBObject = new DBOperations();
+	
+	function includeDB() {
+		include_once("dbOperations.php");
+		$DBObject = new DBOperations();
+
+		$this->DBOb = $DBObject;
+		
+	}
+
+	
+	//include_once("insertAgriculture.php");
+	//$agri = new InsertAgriFormData();
    
 ?>
 
@@ -68,7 +83,7 @@
     <div class="form-style-10">
     <h1> Details of the Applicant <span> </span></h1>
 
-    <form>
+    <form action="insertAgriculture.php" method="POST">
         <!-- Section 1 Applicant Details -->
         <div class="section"><span>1</span>Applicant Details</div>
         <div class="inner-wrap">
