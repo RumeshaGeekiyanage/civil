@@ -57,6 +57,7 @@
                         <td>
                             <button type = "button" id = "dUOriAppBtn"><i class="fa fa-paperclip fa-lg"></i></button><span class="name" id = "dUOriAppSpan">No file selected</span>
                             <input type="file" name="" id="dUOriApp">
+							
                         </td>
                     </tr>
                     <tr>
